@@ -12,8 +12,6 @@ import java.util.Locale;
 
 public class DataGenerator {
 
-    //Faker.numerify('#########')
-    //Faker::PhoneNumber.cell_phone.gsub(/-/, '')
 
     @UtilityClass
     public static class Registration {
@@ -31,6 +29,5 @@ public class DataGenerator {
 
     }
 
-   //
 
 }
