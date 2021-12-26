@@ -35,6 +35,7 @@ public class CardDeliveryTest {
     }
 
 
+
     @Test
     public void shouldSendCompletedFormAndChangeDate() {
         Configuration.holdBrowserOpen = true;
