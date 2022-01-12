@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class RegistrationInfo {
     private final String address;
-    private final String date;
     private final String name;
     private final String phoneNumber;
 }
