@@ -22,15 +22,7 @@ import ru.netology.data.DataGenerator;
 import ru.netology.data.RegistrationInfo;
 
 
-
-
 public class CardDeliveryTest {
-
-
-
-
-
-
 
 
     @Test
@@ -56,9 +48,9 @@ public class CardDeliveryTest {
         $("[data-test-id=\"success-notification\"] button .icon-button__content").click();
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);
         $("[data-test-id='date'] .input__control").setValue(changeDate);
-        $(".button__text").click();//Нажать кнопку Забронировать
+        $(".button__text").shouldHave(Condition.text("Запланировать")).click();//Нажать кнопку Забронировать
         $("[data-test-id=\"replan-notification\"]").shouldHave(Condition.text("Необходимо подтверждение"));
-        $("[data-test-id=\"replan-notification\"] div[class*=\"notification__content\"] button span[class*=\"button__content\"] span[class*=\"button__text\"]").click();
+        $("[data-test-id=\"replan-notification\"] .button__text").shouldHave(Condition.text("Перепланировать")).click();
         $("[data-test-id=\"success-notification\"] ").shouldHave(Condition.text("Успешно!\n" +
                 "Встреча успешно запланирована на " + changeDate));
 
